@@ -17,11 +17,8 @@ import java.io.PrintWriter
 import java.net.Socket
 
 data class TimerInformation(
-    val minute: String,
-    val second: String,
-    var canGetUTC: Boolean = true,
-    val set_minute: String,
-    val set_second:String
+    val durationMillis: Long,
+    val startTimeMillis: Long
 )
 
 class PracticaltTest02v7MainActivity : AppCompatActivity() {

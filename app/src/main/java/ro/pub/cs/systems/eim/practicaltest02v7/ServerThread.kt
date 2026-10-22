@@ -50,7 +50,11 @@ class ServerThread(private val port: Int) : Thread() {
     @Synchronized
     fun setData(key: String, timerInfo: TimerInformation) {
         data[key] = timerInfo
-        Log.i(TAG, "Timer set for $key: ${timerInfo.minute}:${timerInfo.second}")
+
+        Log.i(
+            TAG,
+            "Timer set for $key: ${timerInfo.durationMillis / 1000} seconds"
+        )
     }
 
     @Synchronized
